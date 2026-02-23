@@ -1,7 +1,7 @@
 {
     "project": "HelloWorld",    
     "target_name": "hello",     
-    "target_type": "execuable", 
+    "target_type": "executable", 
     "build_dir": "build",       
     "output_dir": "bin",        
 

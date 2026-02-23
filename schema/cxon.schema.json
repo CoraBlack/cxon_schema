@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Cxon Configuration",
+    "description": "Schema for cxon build configuration files",
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "string",
+            "description": "Project name"
+        },
+        "target_name": {
+            "type": "string",
+            "description": "Target executable name"
+        },
+        "target_type": {
+            "type": "string",
+            "enum": ["executable", "static_lib", "shared_lib", "object_lib"],
+            "description": "Build target type"
+        },
+        "build_dir": {
+            "type": "string",
+            "description": "Build output directory"
+        },
+        "output_dir": {
+            "type": "string",
+            "description": "Output directory"
+        },
+        "toolchain": {
+            "type": "string",
+            "enum": ["gnu", "llvm", "msvc"],
+            "description": "Toolchain to use"
+        },
+        "cc": {
+            "type": "string",
+            "description": "C compiler"
+        },
+        "cxx": {
+            "type": "string",
+            "description": "C++ compiler"
+        },
+        "threads": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Number of build threads"
+        },
+        "flags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Common compiler flags"
+        },
+        "cflags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "C compiler flags"
+        },
+        "cxxflags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "C++ compiler flags"
+        },
+        "include": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Include directories"
+        },
+        "defines": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Preprocessor defines"
+        },
+        "sources": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Source files"
+        },
+        "link": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Linker flags"
+        },
+        "libs": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Libraries to link"
+        }
+    },
+    "required": ["project", "target_name"]
+}
