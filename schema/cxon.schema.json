@@ -100,5 +100,5 @@
             "description": "Libraries to link"
         }
     },
-    "required": ["project", "target_name", "target_type", "toolchain", "sources"]
+    "required": ["project", "target_type", "toolchain", "sources"]
 }
