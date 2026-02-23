@@ -1,0 +1,27 @@
+name: Deploy cxon schemas
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'schemas/**'  # 只有 schemas 目录变化时才触发
+
+jobs:
+  validate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate JSON Schemas
+        uses: dsanders11/json-schema-validate-action@v1.4.0
+        with:
+          schema: schemas/meta-schema.json  
+          json-path: schemas/**/*.json
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./schemas  
+          destination_dir: ./
