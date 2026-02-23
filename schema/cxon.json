@@ -1,0 +1,47 @@
+{
+    "project": "HelloWorld",    
+    "target_name": "hello",     
+    "target_type": "execuable", 
+    "build_dir": "build",       
+    "output_dir": "bin",        
+
+    "toolchain": "gnu",         
+    "cc": "",                   
+    "cxx": "",                  
+
+    "threads": 4,               
+
+    "flags": [                  
+        "-Wall",
+        "-Wextra"
+    ],
+
+    "cflags": [                
+
+    ],
+
+    "cxxflags": [          
+
+    ],
+
+    "include": [         
+        
+    ],
+
+    "defines": [        
+
+    ],
+
+    "sources": [             
+        "./main.cpp",
+        "./func.cpp"
+    ],
+
+    "link": [                
+
+    ],
+
+    "libs": [             
+
+    ]
+}
