@@ -4,7 +4,8 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'schemas/**'  # 只有 schemas 目录变化时才触发
+      - 'schemas/**'
+  workflow_dispatch:
 
 jobs:
   validate-and-deploy:
