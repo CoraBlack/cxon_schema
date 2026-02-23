@@ -32,6 +32,24 @@ npx ajv validate -s schema/cxon.schema.json -d schema/cxon.json
 | `link`        | array | Directories of libraries to link |
 | `libs`        | array | Libraries to link |
 
+## Schema URL
+
+The schema is deployed to GitHub Pages. You can reference it directly in your configuration file or IDE:
+
+```
+https://corablack.github.io/cxon_schema/cxon.schema.json
+```
+
+For example, in your `cxon.json` file:
+
+```json
+{
+    "$schema": "https://corablack.github.io/cxon_schema/cxon.schema.json",
+    "project": "my_project",
+    "target_name": "my_app"
+}
+```
+
 ## Deploy
 
 Push to `main` branch to trigger automatic deployment to GitHub Pages.
