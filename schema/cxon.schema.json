@@ -25,6 +25,14 @@
             "type": "string",
             "description": "Output directory"
         },
+        "export_compile_commands": {
+            "type": "boolean",
+            "description": "Whether to export compile_commands.json"
+        },
+        "export_compile_commands_path": {
+            "type": "string",
+            "description": "Path to export compile_commands.json, default is same as`build_dir` "
+        },
         "toolchain": {
             "type": "string",
             "enum": ["gnu", "llvm", "msvc"],
@@ -100,5 +108,5 @@
             "description": "Libraries to link"
         }
     },
-    "required": ["project", "target_type", "toolchain", "sources"]
+    "required": ["project", "toolchain", "sources"]
 }
