@@ -19,6 +19,8 @@ npx ajv validate -s schema/cxon.schema.json -d schema/cxon.json
 | `target_type` | string | executable, static_lib, shared_lib or object_lib |
 | `build_dir`   | string | Build output directory |
 | `output_dir`  | string | Output directory |
+| `export_compile_commands`      | boolean | Is enable to export `compile_commands.json` |
+| `export_compile_commands_path` | string | Path where export `compile_commands.json` to |
 | `toolchain`   | string | gnu, llvm, or msvc |
 | `cc`          | string | Custom C compiler |
 | `cxx`         | string | Custom C++ compiler |
