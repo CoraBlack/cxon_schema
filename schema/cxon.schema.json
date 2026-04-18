@@ -17,6 +17,13 @@
             "enum": ["executable", "static_lib", "shared_lib", "object_lib"],
             "description": "Build target type"
         },
+        "modules": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Submodules to include in the build"
+        },
         "build_dir": {
             "type": "string",
             "description": "Build output directory"
