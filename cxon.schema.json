@@ -45,6 +45,14 @@
             "enum": ["gnu", "llvm", "msvc"],
             "description": "Toolchain to use"
         },
+        "cc_prefix": {
+            "type": "string",
+            "description": "c compiler mangle"
+        },
+        "cxxc_prefix": {
+            "type": "string",
+            "description": "c++ compiler mangle"
+        },
         "cc": {
             "type": "string",
             "description": "C compiler"
