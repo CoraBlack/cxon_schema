@@ -23,6 +23,8 @@ npx ajv validate -s schema/cxon.schema.json -d schema/cxon.json
 | `export_compile_commands`      | boolean | Is enable to export `compile_commands.json` |
 | `export_compile_commands_path` | string | Path where export `compile_commands.json` to |
 | `toolchain`   | string | gnu, llvm, or msvc |
+| `cc_prefix`   | string | C compiler mangle |
+| `cxxc_prefix` | string | C++ compiler mangle |
 | `cc`          | string | Custom C compiler |
 | `cxx`         | string | Custom C++ compiler |
 | `threads`     | integer | Number of build threads |
